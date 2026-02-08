@@ -1,17 +1,25 @@
-# Confidence-Guided Budgeter (CGB)
+Confidence-Guided Budgeter (CGB)- A hybrid machine learning framework designed to balance predictive accuracy with interpretability in financial decision-making systems.
 
-## Overview
-A hybrid ML framework for credit risk assessment that balances accuracy and interpretability. The system defaults to a transparent Logistic Regression model and only switches to a Random Forest when confidence is high.
+Overview 
+The CGB system arbitrates between an interpretable Logistic Regression model and a high-accuracy Random Forest classifier. By using calibrated confidence estimates, the framework ensures that complex models are only utilized when they exhibit high certainty, defaulting to transparent decision logic otherwise.
 
-## Installation
-1. Clone this repository: 
-   `git clone https://github.com/SakshiGhatge1999/Confidence-Guided-Budgeter.git`
-2. Install the required libraries: 
-   `pip install -r requirements.txt`
+Key Results
+Optimal Threshold (tau): 0.88.
+Trust Reliance Ratio (TRR): 72.2% of decisions were made by the interpretable model.
+Hybrid Accuracy: 70.9% on the final test set.
+Statistical Validation: Paired t-test p-value of 4.26e-08 (p < 0.05).
 
-## How to Run
-1. Open the Jupyter Notebook: `CGB(phase 3).ipynb`.
-2. Run all cells to reproduce the data preprocessing, arbitration loop, and statistical validation.
+Installation
+Clone the repository: git clone https://github.com/SakshiGhatge1999/Confidence-Guided-Budgeter.git
 
-## Results
-The system achieved a **Trust Reliance Ratio of 72.2%** with a hybrid accuracy of **70.9%**.
+Install required dependencies: pip install -r requirements.txt
+
+How to Run
+Ensure german_credit_data.csv is in the same directory as the notebook.
+Open Confidence-Guided Budgeter .ipynb in a Jupyter environment.
+Select "Run All" to reproduce the preprocessing, calibration, and arbitration experiments.
+
+Repository Structure
+Confidence-Guided Budgeter .ipynb: Main implementation and experimental results.
+german_credit_data.csv: Statlog (German Credit) dataset.
+requirements.txt: List of Python libraries required for reproducibility.
