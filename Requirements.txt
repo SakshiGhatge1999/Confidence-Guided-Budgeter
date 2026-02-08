@@ -1,1 +1,7 @@
-numpypandasscikit-learnmatplotlibjoblib
+pandas
+numpy
+scikit-learn
+matplotlib
+seaborn
+joblib
+scipy
